@@ -14,13 +14,22 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         info.visibility  = View.INVISIBLE
-        btn.setOnClickListener{
-            var berat : Double = berat.text.toString().toDouble()
-            var tinggi : Double = tinggi.text.toString().toDouble()
+        btn.setOnClickListener {
+            var berat: Double = berat.text.toString().toDouble()
+            var tinggi: Double = tinggi.text.toString().toDouble()
 
-            Log.i("msg","berat anda = ${berat}, berat ${berat} ")
+
+            var bmi : Double = (berat*703)/(berat*berat)
+            Log.i("msg", "+++berat is = ${berat}, tinggi is ${berat}, BMI is ${bmi} ")
+
         }
 
     }
-
 }
+//
+//bmi = b*703/hsqr
+//
+//UndeWeight = <18.5
+//NormalWeight = 18.5 - 24.9
+//OverWeight = 25 - 29.9
+//Obesity = BMI of 30 or greater
