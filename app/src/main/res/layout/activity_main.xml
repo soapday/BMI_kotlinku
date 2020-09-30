@@ -1,81 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:gravity="center"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
+
     <TextView
+        android:id="@+id/Tberat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sabda BMI"
-        android:textSize="45sp"
+        android:layout_marginTop="8dp"
+        android:text="Berat Badan"
         android:textColor="#000"
-        android:layout_marginHorizontal="25dp"
-        android:layout_marginVertical="15dp"
-        />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Berat badan (Kg)"
-        android:layout_marginHorizontal="30dp"/>
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/berat"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="30dp"
-        android:padding="12dp"
-        android:inputType="numberDecimal"
-        android:layout_marginVertical="15dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/edit_bg"
-        />
+        android:ems="10"
+        android:gravity="center"
+        android:hint="dalam Kg"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Tberat" />
+
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/Ttinggi"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tinggi Badan (cm)"
-        android:layout_marginHorizontal="30dp"/>
+        android:layout_marginTop="16dp"
+        android:text="Tinggi badan"
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/berat" />
+
     <EditText
         android:id="@+id/tinggi"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="30dp"
-        android:padding="12dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_bg"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="dalam Cm"
         android:inputType="numberDecimal"
-        android:background="@drawable/edit_bg"/>
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Ttinggi" />
 
     <Button
         android:id="@+id/btn"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginVertical="15dp"
+        android:layout_marginTop="24dp"
         android:text="Hitung"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tinggi"
         android:background="@drawable/btn_bg"
-        android:textColor="#fafafa"
-        />
+        android:textStyle="bold"/>
+
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:text="Hasil Mu"
-        android:textSize="40sp"
-        android:textColor="#000"
+        android:layout_marginTop="30dp"
+        android:text="INFO"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn" />
 
-        />
-    <TextView
-        android:id="@+id/hasil"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:textSize="50sp"
-        android:textColor="#000"
-        />
-
-
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

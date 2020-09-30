@@ -2,7 +2,10 @@ package com.example.akot
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlin.math.log
 
 class MainActivity : AppCompatActivity() {
 
@@ -10,17 +13,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
+        info.visibility  = View.INVISIBLE
         btn.setOnClickListener{
-//            mengambil nilai berat dari edit text dan mengubahnya ke bentuk meter
-            val b = berat.text.toString().toFloat()/100
-//            mengambul nilai tinggi dari edit text saja
-            val t = tinggi.text.toString().toFloat()
-//            menuliskan rumus untuk ditampilkan di hasil
-            val has = b/(t*t)
-            hasil.text = "%.2f".format(has)
+            var berat : Double = berat.text.toString().toDouble()
+            var tinggi : Double = tinggi.text.toString().toDouble()
 
+            Log.i("msg","berat anda = ${berat}, berat ${berat} ")
         }
+
     }
 
 }
